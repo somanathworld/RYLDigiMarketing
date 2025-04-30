@@ -952,4 +952,8 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+.image-container{
+	flex-direction : row;
+}
 /*# sourceMappingURL=style.css.map */
