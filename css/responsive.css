@@ -96,7 +96,14 @@
   }
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+	.image-container {
+		flex-direction : column
+	}
+	.image-margin {
+		margin : 0px 0px 15px 0px !important;
+	}
+}
 
 @media (max-width: 480px) {}
 
