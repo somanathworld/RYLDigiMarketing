@@ -289,6 +289,13 @@ a:focus {
   font-size: 24px;
 }
 
+.navbar-brand img{
+	width : 70px;
+	height : 70px;
+	margin-left : -20px;
+}
+
+
 .custom_nav-container {
   padding: 0;
 }
