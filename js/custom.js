@@ -25,3 +25,27 @@ function startProgress() {
         progressBar.style.width = '0';
     }, 2000);
 }
+
+
+//Submit button interaction;
+document.getElementById("freeConsultantForm").addEventListener("submit", async function(e) {
+	e.preventDefault();
+
+	const BASE_URL = "https://usersexpressdb.vercel.app"; // ← Replace with your deployed base URL
+
+	const name = document.getElementById("contact-form-name").value;
+	const email = document.getElementById("contact-form-email").value;
+	const phone = document.getElementById("contact-form-phn").value;
+	const remarks = document.getElementById("contact-form-msg").value;
+
+	const res = await fetch(`${BASE_URL}/api/addUser`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({ name, email, phone, remarks })
+	});
+
+	const data = await res.json();
+	alert(data.message || "Our team will call you for further discussion!");
+	e.target.reset();
+}
+);
