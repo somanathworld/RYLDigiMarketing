@@ -2,11 +2,20 @@
   .footer_container {
     border-radius: 250px 0 0 0;
   }
+  .item-title {
+  	font-size: 1em;
+  }
+  
+  .pricing-card{
+  	font-size: 10px;
+  }
+  
 }
 
 @media (max-width: 1120px) {}
 
 @media (max-width: 992px) {
+		
   .hero_area {
     height: auto;
   }
@@ -46,6 +55,7 @@
   .info_section .row>div:nth-child(2) {
     margin-bottom: 25px;
   }
+  
 }
 
 @media (max-width: 768px) {
@@ -131,4 +141,52 @@
   .blog-container{
     max-width: 85%;
   }
+}
+
+/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+
+/* For screens smaller than 600px (very small mobiles) */
+@media (max-width: 1000px) {
+    .pricing-container {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .pricing-item {
+        flex-direction: column;
+        overflow-x: initial;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-title {
+        font-size: 1em;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .pricing-card {
+		min-width : max(200px, 90%);
+        margin-bottom: 10px;
+        padding: 15px;
+        align-items: center; /* Center content on mobile */
+        font-size: 14px;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1.0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .price-container {
+        flex-direction: column; /* Stack prices on mobile */
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .original-price {
+        font-size: 1.3em;
+        margin-right: 0;
+    }
 }
