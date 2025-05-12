@@ -1054,3 +1054,152 @@ a:focus {
 	flex-direction : row;
 }
 /*# sourceMappingURL=style.css.map */
+
+/*Subscription page*/
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: min(1500px, 90%);
+    width: 100%;
+    margin: 50px auto;
+}
+
+.pricing-item {
+    background-color: #6B1C87;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.item-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    flex-basis: 25%;
+}
+
+.pricing-card {
+    background-color: #f5e6da;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #eee;
+    flex: 1;
+    min-width: 225px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-card.featured {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    background-color: #9FFC9F;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan-name {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.original-price {
+    font-size: 1.5em;
+    color: #777;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.discounted-price {
+    font-size: 2.2em;
+    color: #333;
+}
+
+.currency {
+    font-size: 0.7em;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.decimal {
+    font-size: 0.7em;
+    vertical-align: bottom;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.plan-features .fa-check {
+    color: green;
+}
+
+.plan-features .fa-times {
+    color: red;
+}
+
+.select-button {
+    background-color: #7335b7;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.select-button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific color accents */
+
