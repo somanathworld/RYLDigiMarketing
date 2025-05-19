@@ -33,11 +33,22 @@ document.getElementById("freeConsultantForm").addEventListener("submit", async f
 
 	const BASE_URL = "https://usersexpressdb.vercel.app"; // ← Replace with your deployed base URL
 
-	const name = document.getElementById("contact-form-name").value;
-	const email = document.getElementById("contact-form-email").value;
-	const phone = document.getElementById("contact-form-phn").value;
-	const remarks = document.getElementById("contact-form-msg").value;
+	const contactName = document.getElementById("contact-form-name");
+	const modalName = document.getElementById("modal-form-name");	
+	const name = contactName == null ? modalName.value : contactName.value;
+	
+	const contactEmail = document.getElementById("contact-form-email");
+	const modalEmail = document.getElementById("modal-form-email");	
+	const email = contactEmail == null ? modalEmail.value : contactEmail.value;
 
+	const contactPhone = document.getElementById("contact-form-phn");
+	const modalPhone = document.getElementById("modal-form-phn");	
+	const phone = contactPhone == null ? modalPhone.value : contactPhone.value;
+	
+	const contactMsg = document.getElementById("contact-form-msg");
+	const modalMsg = document.getElementById("modal-form-msg");	
+	const remarks = contactMsg == null ? modalMsg.value : contactMsg.value;
+	
 	const res = await fetch(`${BASE_URL}/api/addUser`, {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
@@ -45,7 +56,7 @@ document.getElementById("freeConsultantForm").addEventListener("submit", async f
 	});
 
 	const data = await res.json();
-	alert(data.message || "Our team will call you for further discussion!");
+	alert(data.message+ "Thank you !!!");		
 	e.target.reset();
 }
 );
