@@ -41,7 +41,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+<style>
+ .checkmark-circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #81c784; /* Success Green */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+      }
 
+      .checkmark {
+        /* Path for the checkmark */
+        stroke-dasharray: 1000; /* For animation */
+        stroke-dashoffset: 1000;
+        stroke: #fff;
+        stroke-width: 10px;
+        stroke-linecap: round;
+        transition: stroke-dashoffset 1s ease-in-out;
+        fill: none;
+        width: 60px;
+        height: 60px;
+}
+
+      .checkmark-animation {
+        stroke-dashoffset: 0; /* Animate the checkmark */
+      }
+
+</style>
 </head>
 
 <body class="sub_page">
@@ -114,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> Basic On-Page</li>
                     <li><i class="fas fa-check"></i> Link Building</li>
                 </ul>
-                <button class="select-button seo-button">Select Basic</button>
+                <button class="select-button seo-button" data-toggle="modal" data-target="#formModal">Select Basic</button>
             </div>
 
             <div class="pricing-card standard featured">
@@ -128,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> Full On-Page</li>
                     <li><i class="fas fa-check"></i> Basic Link Building</li>
                 </ul>
-                <button class="select-button seo-button">Select Standard</button>
+                <button class="select-button seo-button" data-toggle="modal" data-target="#formModal">Select Standard</button>
             </div>
 
             <div class="pricing-card premium">
@@ -142,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> Technical SEO</li>
                     <li><i class="fas fa-check"></i> Robust Link Building</li>
                 </ul>
-                <button class="select-button seo-button">Select Premium</button>
+                <button class="select-button seo-button" data-toggle="modal" data-target="#formModal">Select Premium</button>
             </div>
         </div>
 
@@ -159,7 +188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> Basic Research</li>
                     <li><i class="fas fa-check"></i> Basic Promotion</li>
                 </ul>
-                <button class="select-button content-button">Select Basic</button>
+                <button class="select-button content-button" data-toggle="modal" data-target="#formModal">Select Basic</button>
             </div>
 
             <div class="pricing-card standard featured">
@@ -173,7 +202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> In-depth Research</li>
                     <li><i class="fas fa-check"></i> Promotion</li>
                 </ul>
-                <button class="select-button content-button">Select Standard</button>
+                <button class="select-button content-button" data-toggle="modal" data-target="#formModal">Select Standard</button>
             </div>
 
             <div class="pricing-card premium">
@@ -187,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> Comprehensive Strategy</li>
                     <li><i class="fas fa-check"></i> Multi-channel Promo</li>
                 </ul>
-                <button class="select-button content-button">Select Premium</button>
+                <button class="select-button content-button" data-toggle="modal" data-target="#formModal">Select Premium</button>
             </div>
         </div>
 
@@ -204,7 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> 3 posts/week</li>
                     <li><i class="fas fa-check"></i> Basic visuals</li>
                 </ul>
-                <button class="select-button social-button">Select Basic</button>
+                <button class="select-button social-button" data-toggle="modal" data-target="#formModal">Select Basic</button>
             </div>
 
             <div class="pricing-card standard featured">
@@ -218,7 +247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> content calendar</li>
                     <li><i class="fas fa-check"></i> Basic Community Mgmt</li>
                 </ul>
-                <button class="select-button social-button">Select Standard</button>
+                <button class="select-button social-button" data-toggle="modal" data-target="#formModal">Select Standard</button>
             </div>
 
             <div class="pricing-card premium">
@@ -232,7 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> Custom Content</li>
                     <li><i class="fas fa-check"></i>Advanced visuals</li>
                 </ul>
-                <button class="select-button social-button">Select Premium</button>
+                <button class="select-button social-button" data-toggle="modal" data-target="#formModal">Select Premium</button>
             </div>
         </div>
 
@@ -249,7 +278,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> Basic Segmentation</li>
                     <li><i class="fas fa-check"></i> Basic analytics</li>
                 </ul>
-                <button class="select-button email-button">Select Basic</button>
+                <button class="select-button email-button" data-toggle="modal" data-target="#formModal">Select Basic</button>
             </div>
 
             <div class="pricing-card standard featured">
@@ -263,7 +292,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i> Advanced Segmentation</li>
                     <li><i class="fas fa-check"></i> Automation set up</li>
                 </ul>
-                <button class="select-button email-button">Select Standard</button>
+                <button class="select-button email-button" data-toggle="modal" data-target="#formModal">Select Standard</button>
             </div>
 
             <div class="pricing-card premium">
@@ -277,11 +306,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><i class="fas fa-check"></i>Full funnel setup</li>
                     <li><i class="fas fa-check"></i> Advanced Automation</li>
                 </ul>
-                <button class="select-button email-button">Select Premium</button>
+                <button class="select-button email-button" data-toggle="modal" data-target="#formModal">Select Premium</button>
             </div>
         </div>
     </div>
-  <!-- end Subscription section -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content" style = "background-color : #350e43; color : white">
+				<div class="modal-header">
+					<h4 class="modal-title" id="exampleModalLabel">Fill Your details below</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id = "freeConsultantForm">
+						<div class = "form-group">
+							<label for = "modal-form-name" class = "form-label">Full Name: </label>
+							<input type="text" class = "form-control" id="modal-form-name" placeholder="Full Name " required/>
+						</div>
+						<div class = "form-group">
+							<label for = "modal-form-email" class = "form-label">Email: </label>
+							<input type="email" class = "form-control" id="modal-form-email" placeholder="Email" required/>
+						</div>
+						<div class = "form-group">
+							<label for = "modal-form-phn" class = "form-label">Phone Number: </label>
+							<input type="tel" class = "form-control" id="modal-form-phn" placeholder="Phone number" required/>
+						</div>
+						<div class = "form-group">
+							<label for = "modal-form-msg" class = "form-label">Message: </label>
+							<input type="text" class = "form-control h-50" id="modal-form-msg" placeholder="Message" />
+						</div>
+						<div class="d-flex justify-content-around align-items-center w-100 mt-4">
+							<button class="btn btn-outline-success w-25" data-toggle="modal" data-target="#successModal">SEND</button>
+							<button type="button" class="btn btn-outline-danger w-25" data-dismiss = "modal">Close</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style = "background-color : #350e43; color : white">
+                <div class="modal-body">
+                    <div class="checkmark-circle">
+						<svg width="50" height="50">
+						  <path d="M10 25 L25 40 L40 10" fill="none" stroke="white" stroke-width="5" />
+						</svg>
+                    </div>
+                    <h4 class="modal-title" id="successModalLabel">Data Saved Successfully</h4>
+                    <p class="mb-4">Your data has been saved successfully.</p>
+                </div>
+                <div class="modal-footer">
+                	<div class = "d-flex justify-content-center">
+                    	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- end Subscription section -->
 
   <div class="footer_container">
     <!-- info section -->
