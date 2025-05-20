@@ -1165,7 +1165,7 @@ a:focus {
     border-bottom: 1px solid #ddd;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 10px;
 }
 
@@ -1198,7 +1198,8 @@ a:focus {
 }
 
 .select-button:hover {
-    background-color: #0056b3;
+    background-color: #e3a375;
+    color : black;
 }
 
 /* Specific color accents */
