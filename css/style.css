@@ -283,7 +283,7 @@ a:focus {
   padding-left: 25px;
 }
 
-.navbar-brand span {
+.navbar-brand h1 {
   font-weight: bold;
   color: #ffffff;
   font-size: 24px;
