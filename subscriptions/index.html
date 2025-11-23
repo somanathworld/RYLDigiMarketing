@@ -475,10 +475,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               phone: phn.value,
               message: form['modal-form-msg'].value
             };
-            fetch('/save-course-enroll', {
+            fetch('https://usersexpressdb.vercel.app/api/addUser', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(data)
+              body: JSON.stringify({
+                name: name.value,
+                email: email.value,
+                phone: phn.value,
+                remarks: form['modal-form-msg'].value
+              })
             })
             .then(res => res.ok ? res.json() : Promise.reject(res))
             .then(resp => {
