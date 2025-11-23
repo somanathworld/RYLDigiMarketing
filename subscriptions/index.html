@@ -192,11 +192,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="courses-container">
         <article class="course-card basic-course">
         <header>
-          <h2 class="course-title">Basic Course</h2>
+          <h2 class="course-title"><strong>Basic Course</strong></h2>
           <p class="course-sub">Perfect for beginners — build a strong foundation in astrology</p>
         </header>
         <div class="course-price">
-          <span class="currency">₹</span><span class="amount">399</span>
+          <span class="currency">₹</span><span class="amount">3999</span>
           <span class="per">one-time</span>
         </div>
         <div class="course-features">
@@ -214,11 +214,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <article class="course-card premium-course">
         <header>
-          <h2 class="course-title">Premium Course</h2>
+          <h2 class="course-title"><strong>Premium Course</strong></h2>
           <p class="course-sub">Advanced training for aspiring professionals and consultants</p>
         </header>
         <div class="course-price">
-          <span class="currency">₹</span><span class="amount">799</span>
+          <span class="currency">₹</span><span class="amount">7999</span>
           <span class="per">one-time</span>
         </div>
         <div class="course-features">
@@ -243,44 +243,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
 	<!-- Modal -->
-	<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content" style = "background-color : #e3a375;">
-				<div class="modal-header">
-					<h4 class="modal-title" id="exampleModalLabel">Fill Your details below</h4>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form id = "freeConsultantForm">
-						<div class = "form-group">
-							<label for = "modal-form-name" class = "form-label">Full Name: </label>
-							<input type="text" class = "form-control" id="modal-form-name" placeholder="Full Name " required/>
-						</div>
-						<div class = "form-group">
-							<label for = "modal-form-email" class = "form-label">Email: </label>
-							<input type="email" class = "form-control" id="modal-form-email" placeholder="Email" required/>
-						</div>
-						<div class = "form-group">
-							<label for = "modal-form-phn" class = "form-label">Phone Number: </label>
-							<input type="tel" class = "form-control" id="modal-form-phn" placeholder="Phone number" required/>
-						</div>
-						<div class = "form-group">
-							<label for = "modal-form-msg" class = "form-label">Message: </label>
-							<input type="text" class = "form-control h-50" id="modal-form-msg" placeholder="Message" />
-						</div>
-						<div class="d-flex justify-content-around align-items-center w-100 mt-4">
-							<button class="btn btn-outline-success w-25" data-toggle="modal" data-target="#successModal">SEND</button>
-							<button type="button" class="btn btn-outline-danger w-25" data-dismiss = "modal">Close</button>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-				</div>
-			</div>
-		</div>
-	</div>
+
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background: linear-gradient(135deg, #fff9f2 0%, #e3a375 100%); border-radius: 16px;">
+        <div class="modal-header" style="border-bottom: 1px solid #f0b77a;">
+          <h4 class="modal-title" id="exampleModalLabel" style="color: #6b2e00; font-weight: bold;">Enroll in a Course</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="courseEnrollForm" novalidate>
+            <div class="form-group">
+              <label for="modal-form-name" class="form-label" style="color:#6b2e00;">Full Name</label>
+              <input type="text" class="form-control" id="modal-form-name" placeholder="Full Name" required pattern="^[A-Za-z ]{2,}$">
+              <div class="invalid-feedback">Please enter your name (letters only).</div>
+            </div>
+            <div class="form-group">
+              <label for="modal-form-email" class="form-label" style="color:#6b2e00;">Email</label>
+              <input type="email" class="form-control" id="modal-form-email" placeholder="Email" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="form-group">
+              <label for="modal-form-phn" class="form-label" style="color:#6b2e00;">Phone Number</label>
+              <input type="tel" class="form-control" id="modal-form-phn" placeholder="Phone number" required pattern="^[0-9]{10,}$">
+              <div class="invalid-feedback">Please enter a valid phone number (10+ digits).</div>
+            </div>
+            <div class="form-group">
+              <label for="modal-form-msg" class="form-label" style="color:#6b2e00;">Message</label>
+              <input type="text" class="form-control h-50" id="modal-form-msg" placeholder="Message (optional)" />
+            </div>
+            <div class="d-flex justify-content-around align-items-center w-100 mt-4">
+              <button type="submit" class="btn btn-success w-50" style="background-color:#e3a375;color:#6b2e00;font-weight:bold;">SEND</button>
+              <button type="button" class="btn btn-outline-danger w-25" data-dismiss="modal">Close</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
 	
 	<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -426,6 +429,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
+
+  <script>
+    // Form validation
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('courseEnrollForm');
+      if (form) {
+        form.addEventListener('submit', function(event) {
+          var valid = true;
+          var name = form['modal-form-name'];
+          var email = form['modal-form-email'];
+          var phn = form['modal-form-phn'];
+
+          // Name validation
+          if (!name.value.match(/^[A-Za-z ]{2,}$/)) {
+            name.classList.add('is-invalid');
+            valid = false;
+          } else {
+            name.classList.remove('is-invalid');
+          }
+          // Email validation
+          if (!email.value.match(/^\S+@\S+\.\S+$/)) {
+            email.classList.add('is-invalid');
+            valid = false;
+          } else {
+            email.classList.remove('is-invalid');
+          }
+          // Phone validation
+          if (!phn.value.match(/^[0-9]{10,}$/)) {
+            phn.classList.add('is-invalid');
+            valid = false;
+          } else {
+            phn.classList.remove('is-invalid');
+          }
+
+          if (!valid) {
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            // Submit via AJAX to server-side script (to be implemented)
+            event.preventDefault();
+            var data = {
+              name: name.value,
+              email: email.value,
+              phone: phn.value,
+              message: form['modal-form-msg'].value
+            };
+            fetch('/save-course-enroll', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            })
+            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(resp => {
+              $('#formModal').modal('hide');
+              $('#successModal').modal('show');
+              form.reset();
+            })
+            .catch(() => {
+              alert('There was an error saving your data. Please try again later.');
+            });
+          }
+        });
+      }
+    });
+  </script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
