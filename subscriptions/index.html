@@ -71,6 +71,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         stroke-dashoffset: 0; /* Animate the checkmark */
       }
 
+      /* Courses section styles */
+      .courses-section {
+        padding: 50px 0;
+        background: linear-gradient(180deg, #fff9f2 0%, #fff 100%);
+      }
+      .courses-header h1 {
+        font-size: 34px;
+        margin-bottom: 8px;
+        color: #6b2e00;
+        font-weight: 700;
+      }
+      .courses-header .lead {
+        color: #444;
+        max-width: 800px;
+        margin: 0 auto 30px auto;
+      }
+      .courses-container {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .course-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(107,46,0,0.08);
+        width: 320px;
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .course-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(107,46,0,0.12); }
+      .course-title { font-size: 22px; color: #3f1f00; margin: 0; }
+      .course-sub { color: #6b4a3a; font-size: 14px; margin-top: 6px; }
+      .course-price { font-weight: 800; color: #111; font-size: 30px; margin: 18px 0; display: flex; align-items: baseline; gap:8px; }
+      .course-price .amount { color: #b33; }
+      .course-price .per { font-size: 12px; color: #666; margin-left: 6px; }
+      .course-features ul { list-style: none; padding: 0; margin: 0 0 18px 0; }
+      .course-features li { padding: 8px 0; border-bottom: 1px dashed #eee; color: #333; font-size: 14px; }
+      .course-features li i { color: #2d7a2d; margin-right: 8px; }
+      .select-course { width: 100%; padding: 10px 14px; font-weight: 600; }
+      .basic-course { border-top: 6px solid #f0b77a; }
+      .premium-course { border-top: 6px solid #6cc0a9; }
+      .courses-seo { margin-top: 28px; text-align: center; color: #444; max-width: 900px; margin-left: auto; margin-right: auto; }
+
+      @media (max-width: 768px) {
+        .courses-container { flex-direction: column; align-items: center; }
+        .course-card { width: 92%; }
+      }
+
 </style>
 </head>
 
@@ -128,189 +180,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- end header section -->
   </div>
 
-  <!-- Subscription section -->
+    <!-- Subscription section -->
 
-    <div class="pricing-container">
-        <div class="pricing-item">
-            <h2 class="item-title seo">SEO</h2>
-            <div class="pricing-card basic">
-                <h3 class="plan-name">Basic</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>10,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>7,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> Keyword Research</li>
-                    <li><i class="fa fa-check"></i> Basic On-Page</li>
-                    <li><i class="fa fa-check"></i> Link Building</li>
-                </ul>
-                <button class="select-button seo-button" data-toggle="modal" data-target="#formModal">Select Basic</button>
-            </div>
+    <section class="courses-section">
+      <div class="container">
+      <div class="courses-header text-center">
+        <h1>Online Astrology Courses</h1>
+        <p class="lead">Learn astrology from basics to advanced with structured lessons, practical exercises and certificate on completion. Choose the plan that fits your learning goals — beginner-friendly or in-depth professional track.</p>
+      </div>
 
-            <div class="pricing-card standard featured">
-                <h3 class="plan-name">Standard</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>16,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>11,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> In-depth Research</li>
-                    <li><i class="fa fa-check"></i> Full On-Page</li>
-                    <li><i class="fa fa-check"></i> Basic Link Building</li>
-                </ul>
-                <button class="select-button seo-button" data-toggle="modal" data-target="#formModal">Select Standard</button>
-            </div>
-
-            <div class="pricing-card premium">
-                <h3 class="plan-name">Premium</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>22,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>15,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> Advanced Strategy</li>
-                    <li><i class="fa fa-check"></i> Technical SEO</li>
-                    <li><i class="fa fa-check"></i> Robust Link Building</li>
-                </ul>
-                <button class="select-button seo-button" data-toggle="modal" data-target="#formModal">Select Premium</button>
-            </div>
+      <div class="courses-container">
+        <article class="course-card basic-course">
+        <header>
+          <h2 class="course-title">Basic Course</h2>
+          <p class="course-sub">Perfect for beginners — build a strong foundation in astrology</p>
+        </header>
+        <div class="course-price">
+          <span class="currency">₹</span><span class="amount">399</span>
+          <span class="per">one-time</span>
         </div>
-
-        <div class="pricing-item">
-            <h2 class="item-title content">Content Marketing</h2>
-            <div class="pricing-card basic">
-                <h3 class="plan-name">Basic</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>7,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>3,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> 2 Blog Posts</li>
-                    <li><i class="fa fa-check"></i> Basic Research</li>
-                    <li><i class="fa fa-check"></i> Basic Promotion</li>
-                </ul>
-                <button class="select-button content-button" data-toggle="modal" data-target="#formModal">Select Basic</button>
-            </div>
-
-            <div class="pricing-card standard featured">
-                <h3 class="plan-name">Standard</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>10,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>7,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> 4 Blog Posts</li>
-                    <li><i class="fa fa-check"></i> In-depth Research</li>
-                    <li><i class="fa fa-check"></i> Promotion</li>
-                </ul>
-                <button class="select-button content-button" data-toggle="modal" data-target="#formModal">Select Standard</button>
-            </div>
-
-            <div class="pricing-card premium">
-                <h3 class="plan-name">Premium</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>13,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>9,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> 8+ Content Pieces</li>
-                    <li><i class="fa fa-check"></i> Comprehensive Strategy</li>
-                    <li><i class="fa fa-check"></i> Multi-channel Promo</li>
-                </ul>
-                <button class="select-button content-button" data-toggle="modal" data-target="#formModal">Select Premium</button>
-            </div>
+        <div class="course-features">
+          <ul>
+          <li><i class="fa fa-check"></i> Introduction to Natal Charts & Planets</li>
+          <li><i class="fa fa-check"></i> Houses, Signs & Aspects explained</li>
+          <li><i class="fa fa-check"></i> Practical chart reading exercises</li>
+          <li><i class="fa fa-check"></i> 4 weeks of guided lessons + workbook</li>
+          </ul>
         </div>
+        <footer>
+          <button class="btn btn-primary select-course" data-toggle="modal" data-target="#formModal">Enroll for ₹399</button>
+        </footer>
+        </article>
 
-        <div class="pricing-item">
-            <h2 class="item-title social">Social Media Marketing</h2>
-            <div class="pricing-card basic">
-                <h3 class="plan-name">Basic</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>8,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>4,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> 1-2 Platforms</li>
-                    <li><i class="fa fa-check"></i> 3 posts/week</li>
-                    <li><i class="fa fa-check"></i> Basic visuals</li>
-                </ul>
-                <button class="select-button social-button" data-toggle="modal" data-target="#formModal">Select Basic</button>
-            </div>
-
-            <div class="pricing-card standard featured">
-                <h3 class="plan-name">Standard</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>12,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>6,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> Up to 3-4 Platforms</li>
-                    <li><i class="fa fa-check"></i> content calendar</li>
-                    <li><i class="fa fa-check"></i> Basic Community Mgmt</li>
-                </ul>
-                <button class="select-button social-button" data-toggle="modal" data-target="#formModal">Select Standard</button>
-            </div>
-
-            <div class="pricing-card premium">
-                <h3 class="plan-name">Premium</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>20,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>9,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> All Major Platforms</li>
-                    <li><i class="fa fa-check"></i> Custom Content</li>
-                    <li><i class="fa fa-check"></i>Advanced visuals</li>
-                </ul>
-                <button class="select-button social-button" data-toggle="modal" data-target="#formModal">Select Premium</button>
-            </div>
+        <article class="course-card premium-course">
+        <header>
+          <h2 class="course-title">Premium Course</h2>
+          <p class="course-sub">Advanced training for aspiring professionals and consultants</p>
+        </header>
+        <div class="course-price">
+          <span class="currency">₹</span><span class="amount">799</span>
+          <span class="per">one-time</span>
         </div>
-
-        <div class="pricing-item">
-            <h2 class="item-title email">Email Marketing</h2>
-            <div class="pricing-card basic">
-                <h3 class="plan-name">Basic</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>7,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>4,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> 2 campaigns/month</li>
-                    <li><i class="fa fa-check"></i> Basic Segmentation</li>
-                    <li><i class="fa fa-check"></i> Basic analytics</li>
-                </ul>
-                <button class="select-button email-button" data-toggle="modal" data-target="#formModal">Select Basic</button>
-            </div>
-
-            <div class="pricing-card standard featured">
-                <h3 class="plan-name">Standard</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>10,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>6,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i> Up to 4 Campaigns/Month</li>
-                    <li><i class="fa fa-check"></i> Advanced Segmentation</li>
-                    <li><i class="fa fa-check"></i> Automation set up</li>
-                </ul>
-                <button class="select-button email-button" data-toggle="modal" data-target="#formModal">Select Standard</button>
-            </div>
-
-            <div class="pricing-card premium">
-                <h3 class="plan-name">Premium</h3>
-                <div class="price-container">
-                    <p class="original-price"><span class="currency">₹</span>15,000</p>
-                    <p class="discounted-price"><span class="currency">₹</span>9,999</p>
-                </div>
-                <ul class="plan-features">
-                    <li><i class="fa fa-check"></i>A/B testing</li>
-                    <li><i class="fa fa-check"></i>Full funnel setup</li>
-                    <li><i class="fa fa-check"></i> Advanced Automation</li>
-                </ul>
-                <button class="select-button email-button" data-toggle="modal" data-target="#formModal">Select Premium</button>
-            </div>
+        <div class="course-features">
+          <ul>
+          <li><i class="fa fa-check"></i> Deep dive into predictive techniques</li>
+          <li><i class="fa fa-check"></i> Remedies, Muhurat & compatibility analysis</li>
+          <li><i class="fa fa-check"></i> Case studies, templates & pro tools</li>
+          <li><i class="fa fa-check"></i> 8 weeks of mentorship + certificate</li>
+          </ul>
         </div>
-    </div>
+        <footer>
+          <button class="btn btn-success select-course" data-toggle="modal" data-target="#formModal">Enroll for ₹799</button>
+        </footer>
+        </article>
+      </div>
+
+      <div class="courses-seo">
+        <h3>Why choose RYL Astrology courses?</h3>
+        <p>Our courses combine traditional Vedic astrology methods with modern teaching techniques. Whether you want to read your first natal chart or build a consultancy, these courses provide practical skills, credible resources and ongoing support. Enroll now and get lifetime access to updated course material.</p>
+      </div>
+      </div>
+    </section>
 
 	<!-- Modal -->
 	<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
